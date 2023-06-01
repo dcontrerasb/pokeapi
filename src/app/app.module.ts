@@ -6,19 +6,17 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './component/search/search.component';
 import { ListItemComponent } from './component/list-item/list-item.component';
 import { PokemonItemComponent } from './component/pokemon-item/pokemon-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     ListItemComponent,
-    PokemonItemComponent
+    PokemonItemComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
