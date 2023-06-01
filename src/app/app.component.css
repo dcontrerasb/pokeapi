@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 200px;
+}
+
+.logo2 {
+  width: 500px;
+}
+
+main {
+  background-color: white;
+}
