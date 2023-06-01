@@ -1,0 +1,18 @@
+Componentes:
+	Buscador
+	ListItem
+	PokemonItem
+
+Clases:
+	Pokemon
+
+Service:
+	PokemonService:
+		getPokemonList();
+		getPokemon(nombre: string);
+
+Repartir Trabajo:
+	Daniel - service
+	Sebastian - Buscador(Componente)
+	Raul - ListItem
+	Alberto - PokemonItem
