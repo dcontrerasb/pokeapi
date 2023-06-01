@@ -1,12 +1,11 @@
 export class Pokemon {
     constructor(
-        public id:number, 
-        public name:string, 
-        public base_experience:number, 
-        public height:number, 
-        public is_default:boolean, 
-        public order:number, 
-        public weight:number ) {
-
-    }
+        public id: number,
+        public imagen: string,
+        public nombre: string,
+        public habilidades: string[],
+        public altura: number,
+        public anchura:number,
+        public stats: string[],
+    ){}
 }
