@@ -1,0 +1,23 @@
+.card {
+  border: 1px solid black;
+  width: 300px;
+  margin: 1em;
+}
+
+.card-title {
+  background-color: #ff1921;
+  padding: 1em;
+  text-align: center;
+}
+
+.card img {
+  width: 250px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+a {
+  color: black;
+}

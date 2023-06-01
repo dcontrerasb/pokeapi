@@ -1,1 +1,9 @@
-<div class="card"></div>
+<a [routerLink]="['/pokemon', this.id]">
+  <div class="card">
+    <h5 class="card-title">{{ this.nombre }}</h5>
+    <div class="card-body">
+      <img [src]="this.imagen" />
+      <p>{{ this.id }}</p>
+    </div>
+  </div>
+</a>
