@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
   selector: 'app-search',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
-
+  constructor(public pokemonService: PokemonService){
+    pokemonService.getPokemon("pikachu");
+  }
 }
