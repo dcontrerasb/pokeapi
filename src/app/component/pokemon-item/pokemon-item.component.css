@@ -1,0 +1,29 @@
+.FichaPokemon{
+    width: auto;
+    margin: 10em;
+    text-align: center;
+}
+.Titulo{
+    text-align: center;
+    border: 1px solid black;
+}
+.table{
+    border: 1px solid black; 
+    display:flex;
+    text-align: left;
+    column-count:2;
+    column-gap: 100px;
+}
+
+.izquierda{
+    border: 1px solid black; 
+    align-items: left;
+}
+.derecha{
+    border: 1px solid black; 
+    align-items:right;
+}
+li {
+    list-style: none;
+    
+}
