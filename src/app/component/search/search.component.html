@@ -1,15 +1,20 @@
 <div class="container h-100">
-    <div class="d-flex justify-content-center h-100">
-      <div class="search">
-        <input class="search_input" type="text" name="" placeholder="Buscar pokemon...">
-        <button>
-            <a class="bi bi-search"></a>
-        </button>
-      </div>
+  <div class="d-flex justify-content-center h-100">
+    <div class="search">
+      <input
+        class="search_input"
+        type="text"
+        name=""
+        placeholder="Buscar pokemon..."
+      />
+      <button>
+        <a class="bi bi-search"></a>
+      </button>
     </div>
   </div>
-  <div class="lista">
-    <div class="container">
-        <app-list-item></app-list-item>
-    </div>
+</div>
+<div class="lista">
+  <div class="pokemon" *ngFor="let pokemon of pokemones">
+    <app-list-item [pokemon]="pokemon"></app-list-item>
   </div>
+</div>

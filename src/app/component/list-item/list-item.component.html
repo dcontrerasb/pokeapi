@@ -1,9 +1,15 @@
-<a [routerLink]="['/pokemon', this.id]">
+<a [routerLink]="['/pokemon', this.pokemon.id]">
   <div class="card">
-    <h5 class="card-title">{{ this.nombre }}</h5>
+    <h5 class="card-title">{{ this.pokemon.name }}</h5>
     <div class="card-body">
-      <img [src]="this.imagen" />
-      <p>{{ this.id }}</p>
+      <img [src]="this.pokemon.sprites.front_default" />
+      <p>{{ this.pokemon.id }}</p>
+      Tipos
+      <div class="notAling">
+        <p *ngFor="let types of this.pokemon.types">
+          {{ this.types.type.name }}
+        </p>
+      </div>
     </div>
   </div>
 </a>

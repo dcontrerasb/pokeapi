@@ -2,6 +2,7 @@
   border: 1px solid black;
   width: 300px;
   margin: 1em;
+  height: 90%;
 }
 
 .card-title {
@@ -20,4 +21,8 @@
 
 a {
   color: black;
+}
+
+.notAling {
+  text-align: left;
 }

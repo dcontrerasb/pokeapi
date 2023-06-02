@@ -1,6 +1,3 @@
 export class Type {
-    constructor(
-        public name: number,
-        public url: number,
-    ){}
+  constructor(public name: String, public url: string) {}
 }

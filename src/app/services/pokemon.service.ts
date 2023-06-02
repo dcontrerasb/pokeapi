@@ -3,20 +3,19 @@ import { HttpClient } from '@angular/common/http';
 import { Pokemon } from '../class/pokemon';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PokemonService {
-
   constructor(private http: HttpClient) {}
 
-  getPokemon(nombre:string){
-    let url="https://pokeapi.co/api/v2";
+  getPokemon(nombre: string) {
+    let url = 'https://pokeapi.co/api/v2';
 
-    return this.http.get<Pokemon>(`${url}/pokemon/${nombre}`)
+    return this.http.get<Pokemon>(`${url}/pokemon/${nombre}`);
   }
 
-  getPokemons(){
-    let url="https://pokeapi.co/api/v2";
+  getPokemons() {
+    let url = 'https://pokeapi.co/api/v2';
 
     return this.http.get<any>(`${url}/pokemon?limit=8&offset=0`);
   }
