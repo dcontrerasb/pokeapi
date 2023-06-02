@@ -17,7 +17,7 @@ export class SearchComponent {
   constructor(private pokemonService: PokemonService, private route: ActivatedRoute) {
     this.pokemonNombre=route.snapshot.paramMap.get('nombre');
 
-    if(this.pokemonNombre != null){
+    if(this.pokemonNombre != null && this.pokemonNombre != "0"){
       //Respuesta para obtener un solo pokemon
       this.pokemonService.getPokemon(this.pokemonNombre).subscribe((res) => {
         this.pokemones.push(res);
