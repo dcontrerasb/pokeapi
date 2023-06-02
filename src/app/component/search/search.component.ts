@@ -12,18 +12,20 @@ export class SearchComponent {
   constructor(private pokemonService: PokemonService){
     let pokemon: Pokemon= new Pokemon(0,new Sprites("", "","","","","","",""),"",[],0,0,[]);
 
+    //Respuesta para obtener un solo pokemon
     pokemonService.getPokemon("pikachu").subscribe(res => {
-      let pokemon:Pokemon = res;
-      console.log(pokemon); 
-      // pokemon = {
-      //   id: res.id,
-      //   sprites: res.sprites,
-      //   name: res.name,
-      //   types: res.types,
-      //   height: res.height,
-      //   weight: res.weight,
-      //   stats: res.stats,
-      // };
+      pokemon = res;
+    });
+
+    //Respuesta para obtener varios pokemon
+    //Si eso lo que se puede hacer es poner un rango de 8 para obtener pokemon randoms
+    pokemonService.getPokemons().subscribe(res =>{
+      res.results.forEach((pokemon:any) => {
+        pokemonService.getPokemon(pokemon.name).subscribe(res => {
+          let pokemon:Pokemon = res;
+          console.log(pokemon);
+        });
+      });
     });
   }
 }
