@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Pokemon } from 'src/app/class/pokemon';
 import { Sprites } from 'src/app/class/sprites';
 import { PokemonService } from 'src/app/services/pokemon.service';
@@ -9,33 +10,28 @@ import { PokemonService } from 'src/app/services/pokemon.service';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent {
-  pokemon: Pokemon;
   pokemones: Pokemon[] = [];
+  pokemon: string = "";
+  pokemonNombre:string | null = "";
 
-  constructor(private pokemonService: PokemonService) {
-    this.pokemon = new Pokemon(
-      0,
-      new Sprites('', '', '', '', '', '', '', ''),
-      '',
-      [],
-      0,
-      0,
-      []
-    );
+  constructor(private pokemonService: PokemonService, private route: ActivatedRoute) {
+    this.pokemonNombre=route.snapshot.paramMap.get('nombre');
 
-    //Respuesta para obtener un solo pokemon
-    this.pokemonService.getPokemon('pikachu').subscribe((res) => {
-      this.pokemon = res;
-    });
-
-    //Respuesta para obtener varios pokemon
-    //Si eso lo que se puede hacer es poner un rango de 8 para obtener pokemon randoms
-    this.pokemonService.getPokemons().subscribe((res) => {
-      res.results.forEach((pokemon: Pokemon) => {
-        pokemonService.getPokemon(pokemon.name).subscribe((res) => {
-          this.pokemones.push(res);
+    if(this.pokemonNombre != null){
+      //Respuesta para obtener un solo pokemon
+      this.pokemonService.getPokemon(this.pokemonNombre).subscribe((res) => {
+        this.pokemones.push(res);
+      });
+    }
+    else{
+      //Respuesta para obtener varios pokemon
+      this.pokemonService.getPokemons().subscribe((res) => {
+        res.results.forEach((pokemon: Pokemon) => {
+          pokemonService.getPokemon(pokemon.name).subscribe((res) => {
+            this.pokemones.push(res);
+          });
         });
       });
-    });
+    }
   }
 }

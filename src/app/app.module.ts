@@ -7,6 +7,7 @@ import { SearchComponent } from './component/search/search.component';
 import { ListItemComponent } from './component/list-item/list-item.component';
 import { PokemonItemComponent } from './component/pokemon-item/pokemon-item.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     ListItemComponent,
     PokemonItemComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

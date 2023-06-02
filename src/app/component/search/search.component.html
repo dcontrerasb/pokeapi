@@ -2,12 +2,13 @@
   <div class="d-flex justify-content-center h-100">
     <div class="search">
       <input
+        [(ngModel)]="this.pokemon"
         class="search_input"
         type="text"
         name=""
         placeholder="Buscar pokemon..."
       />
-      <button>
+      <button [routerLink]="['', this.pokemon]">
         <a class="bi bi-search"></a>
       </button>
     </div>
