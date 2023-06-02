@@ -8,7 +8,7 @@
         name=""
         placeholder="Buscar pokemon..."
       />
-      <button [routerLink]="['', this.pokemon]">
+      <button (click)="searchPokeon(this.pokemon)">
         <a class="bi bi-search"></a>
       </button>
     </div>
