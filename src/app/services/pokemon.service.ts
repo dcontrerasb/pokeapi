@@ -17,6 +17,6 @@ export class PokemonService {
   getPokemons() {
     let url = 'https://pokeapi.co/api/v2';
 
-    return this.http.get<any>(`${url}/pokemon?limit=8&offset=0`);
+    return this.http.get<any>(`${url}/pokemon?limit=12&offset=0`);
   }
 }
