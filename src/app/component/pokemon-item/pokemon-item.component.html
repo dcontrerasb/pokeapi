@@ -1,15 +1,17 @@
-<div class="FichaPokemon">
+<div class="all">
+  <div class="FichaPokemon">
     <div class="Titulo">Información Pokémon</div>
-      <div class="arriba">
-        <li>
-          <img src="{{ pokemones[0].sprites.front_default }}" alt="" />
-        </li>
-        <li>Nº{{ pokemones[0].id }} {{ pokemones[0].name }}</li>
+    <div class="arriba">
+      <div>
+        <img src="{{ pokemones[0].sprites.front_default }}" alt="" />
       </div>
-      <div class="abajo">
+      <div class="title">Nº{{ pokemones[0].id }} {{ pokemones[0].name }}</div>
+    </div>
+    <div class="abajo">
+      <ul>
         <li>
           Tipo
-          <ul>
+          <ul class="item">
             <li *ngFor="let types of pokemones[0].types">
               {{ types.type.name | titlecase }}
             </li>
@@ -17,13 +19,15 @@
         </li>
         <li>
           Habilidades
-          <ul>
+          <ul class="item">
             <li *ngFor="let stats of pokemones[0].stats">
               {{ stats.stat.name | uppercase }}: {{ stats.base_stat }}
             </li>
           </ul>
         </li>
-        <li>Altura: {{ pokemones[0].height }}</li>
-        <li>Peso: {{ pokemones[0].weight }}</li>
-      </div>
+        <li>Altura: {{ pokemones[0].height }} m</li>
+        <li>Peso: {{ pokemones[0].weight }} kg</li>
+      </ul>
+    </div>
   </div>
+</div>

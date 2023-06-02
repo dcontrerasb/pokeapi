@@ -1,25 +1,57 @@
-.FichaPokemon{
-    margin: 10em;
-    width: 50%
+.all {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
-.Titulo{
-    text-align: center;
-    border: 1px solid black;
-    width:100%;
-    padding: 0.5em;
+
+.FichaPokemon {
+  margin: 1em;
+  text-align: center;
+  width: 50%;
 }
-.arriba{
-    border: 1px solid black; 
-    align-items: left;
-    background:rgb(234, 250, 241 );
-    text-align: center;
-    width: 100%;
+
+img {
+  width: 30%;
+  margin-bottom: 1em;
 }
-.abajo{
-    border: 1px solid black; 
-    align-items:left;
+
+.title {
+  margin-bottom: 1em;
 }
+
+.Titulo {
+  text-align: center;
+  border: 1px solid black;
+  width: 100%;
+  padding: 0.5em;
+}
+
+.arriba {
+  border: 1px solid black;
+  align-items: left;
+  background: rgb(234, 250, 241);
+  width: 100%;
+}
+
+.abajo {
+  border: 1px solid black;
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.abajo ul {
+  margin-bottom: 1em;
+  width: 100%;
+  padding: 0;
+  text-align: left;
+}
+
 li {
-    list-style: none;
-    
+  list-style: none;
+  width: 100%;
+}
+
+.item li {
+  text-align: center;
 }

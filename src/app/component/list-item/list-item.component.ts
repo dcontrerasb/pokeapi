@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Pokemon } from 'src/app/class/pokemon';
 import { Sprites } from 'src/app/class/sprites';
 
@@ -7,7 +7,7 @@ import { Sprites } from 'src/app/class/sprites';
   templateUrl: './list-item.component.html',
   styleUrls: ['./list-item.component.css'],
 })
-export class ListItemComponent implements OnInit {
+export class ListItemComponent {
   @Input() pokemon: Pokemon = new Pokemon(
     0,
     new Sprites('', '', '', '', '', '', '', ''),
@@ -17,8 +17,4 @@ export class ListItemComponent implements OnInit {
     0,
     []
   );
-
-  ngOnInit(): void {
-    console.log(this.pokemon.types[0].type.name);
-  }
 }
